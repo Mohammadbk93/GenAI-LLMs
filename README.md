@@ -292,4 +292,10 @@ This project uses a reflection-based workflow where the AI:
 - LangGraph
 - OpenAI API
 
+---
 
+## Deployment
+
+This project is deployed on Streamlit Cloud.
+
+---
