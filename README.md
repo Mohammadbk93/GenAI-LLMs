@@ -156,7 +156,7 @@ ________________________________________________________________________________
 ### [👉Click here to view the Live App](https://llms-phd-program.streamlit.app/)
 
 <p align="center">
-  <img src="https://github.com/user-attachments/assets/491fb663-11fd-480d-885c-56159a3879bd" width="900" />
+  <img src="https://github.com/user-attachments/assets/e35eed80-8a84-4225-b60b-928e3d78a49a" />
 </p>
 
 ## What I Have Done
