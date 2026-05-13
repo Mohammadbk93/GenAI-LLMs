@@ -307,7 +307,7 @@ This project is deployed on Streamlit Cloud.
 
 # 5. 🧠 Agentic Essay Writer
 
-## 📌 Project Overview
+##  Project Overview
 
 Agentic Essay Writer is an AI-powered essay generation application designed using an agentic workflow architecture. The system combines large language models, web research, iterative reflection, and revision mechanisms to generate high-quality essays dynamically.
 ### [👉Click here to view the Live App](https://agentic-essay-writer-k7.streamlit.app/)
