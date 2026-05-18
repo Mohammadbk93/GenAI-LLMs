@@ -468,3 +468,192 @@ Future enhancements may include:
 Agentic Essay Writer represents a complete end-to-end AI engineering project that combines modern LLM workflows, agentic orchestration, retrieval integration, iterative reasoning, and frontend deployment into a unified intelligent application.
 
 The project serves as both a practical AI product prototype and a strong demonstration of applied AI engineering concepts using modern open-source tooling and APIs.
+
+_____________________________________________________________________________________________________________________________________________________
+# 6. AI Finance Agent
+
+> ⚠️ This is a personal and private project built for learning, research, and experimenting with AI-driven financial analysis and stock opportunity detection. The long-term goal is to create an intelligent finance agent for my own trading and investment research workflow. Since professional trading systems require strict financial logic, risk management, and validated strategies, this project is still evolving while I continue researching better trading theories, financial rules, and market analysis approaches.
+
+This project is an AI-powered finance research and market scanning system that analyzes stocks, sectors, market trends, news sentiment, SEC filings, and company fundamentals to detect potential opportunities across the US stock market. It combines AI agents, vector databases, semantic SEC filing search, sector-based opportunity scoring, trend analysis, and Telegram alerts into one unified financial intelligence platform.
+
+<img width="1067" height="611" alt="FA2" src="https://github.com/user-attachments/assets/9d0d4083-450b-4a57-9b8a-d7d5cd887110" />
+<img width="1071" height="608" alt="FA3" src="https://github.com/user-attachments/assets/29a58d7a-73c9-49e2-a987-8aa7d507ae65" />
+<img width="1079" height="515" alt="FA4" src="https://github.com/user-attachments/assets/87847920-bcf1-4f3c-9840-490a59311f1f" />
+<img width="1072" height="408" alt="FA5" src="https://github.com/user-attachments/assets/e72bba68-3890-49f9-b8ee-71400285a53c" />
+<img width="1079" height="611" alt="FA6" src="https://github.com/user-attachments/assets/216d84e9-8d93-49c6-a0b4-cd02e87a9ec2" />
+<img width="1079" height="613" alt="FA7" src="https://github.com/user-attachments/assets/55caa395-51ac-41ab-aa06-ae39b782162f" />
+<img width="1079" height="586" alt="FA8" src="https://github.com/user-attachments/assets/fe5e9633-7ea5-45ca-bee3-e348b4eaabc2" />
+
+
+---
+
+# Features
+
+- AI-powered finance research agent
+  - Ask natural language questions about stocks, risks, valuation, SEC filings, growth, and trends.
+
+- SEC Filing RAG System
+  - Downloads SEC filings (10-K)
+  - Chunks and indexes filings into a vector database
+  - Uses semantic search for official filing analysis
+
+- Vector Search with ChromaDB
+  - Stores embeddings of SEC filing chunks
+  - Enables semantic retrieval instead of keyword-only search
+
+- S&P 500 Market Scanner
+  - Dynamically loads S&P 500 companies
+  - Scans companies automatically
+  - Detects potential market opportunities
+
+- Sector Opportunity Scanner
+  - Groups companies by sectors such as:
+    - Technology
+    - Healthcare
+    - Financial Services
+    - Energy
+    - Real Estate
+    - Utilities
+    - Industrials
+    - Consumer sectors
+  - Ranks sectors by average opportunity score
+
+- Opportunity Scoring Engine
+  - Calculates custom opportunity scores using:
+    - Revenue growth
+    - Earnings growth
+    - Trend analysis
+    - News sentiment
+    - Profitability
+    - Valuation metrics
+    - Debt analysis
+
+- Trend & Momentum Analysis
+  - Detects:
+    - Strong upward trends
+    - Weak trends
+    - Momentum signals
+
+- News Sentiment Analysis
+  - Analyzes recent company news
+  - Detects positive or negative market sentiment
+
+- Telegram Alert System
+  - Sends opportunity alerts directly to Telegram
+  - Notifies strong or high-confidence opportunities
+
+- Historical Scan Tracking
+  - Stores previous scans
+  - Detects score changes between scans
+
+- Interactive Streamlit Dashboard
+  - User-friendly finance dashboard
+  - Sector exploration
+  - Company inspection
+  - AI research chat interface
+
+---
+
+# Technologies Used
+
+## Core Technologies
+
+- Python
+  - Main backend language for the entire system
+
+- Streamlit
+  - Interactive frontend dashboard and UI
+
+- OpenAI API
+  - AI reasoning
+  - Embeddings
+  - Research generation
+  - Semantic analysis
+
+- ChromaDB
+  - Vector database for SEC filing embeddings
+
+- LangGraph
+  - AI agent workflow orchestration
+
+- LangChain
+  - LLM tooling and agent integration
+
+---
+
+## Financial & Data Libraries
+
+- yfinance
+  - Stock market data
+  - Company fundamentals
+  - Financial metrics
+  - Historical prices
+
+- pandas
+  - Data manipulation and analysis
+
+- numpy
+  - Numerical operations and calculations
+
+- requests
+  - API requests
+  - SEC filing retrieval
+  - Telegram communication
+
+- beautifulsoup4
+  - HTML parsing for SEC documents
+
+---
+
+## AI & NLP
+
+- OpenAI Embeddings
+  - Semantic vector embeddings for SEC filing search
+
+- RAG (Retrieval-Augmented Generation)
+  - Combines vector search with AI reasoning
+
+- Semantic Search
+  - Retrieves relevant filing context intelligently
+
+---
+
+## Notification & Automation
+
+- Telegram Bot API
+  - Real-time opportunity alerts
+
+- dotenv
+  - Secure environment variable management
+
+---
+
+# About SerpAPI Integration
+
+A future improvement for this project is integrating SerpAPI to provide real-time stock market data and live financial information directly into the AI agent workflow.
+
+At the time of development, my free SerpAPI credits were already exhausted. SerpAPI currently provides around 250 free API requests per month, which was not sufficient for large-scale market scanning and continuous agent-based analysis.
+
+
+# Current System Workflow
+
+---
+
+```text
+S&P 500 Companies
+        ↓
+Market Data Collection
+        ↓
+Trend + Fundamental Analysis
+        ↓
+News Sentiment Analysis
+        ↓
+Opportunity Scoring
+        ↓
+Sector Classification
+        ↓
+AI Research & SEC Filing Analysis
+        ↓
+Telegram Opportunity Alerts
+```
+
