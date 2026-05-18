@@ -656,4 +656,115 @@ AI Research & SEC Filing Analysis
         ↓
 Telegram Opportunity Alerts
 ```
+_____________________________________________________________________________________________________________________________________________________
 
+# 7. 🔎 AI Research Agent
+
+
+AI Research Agent is a LangGraph-powered research assistant that generates structured research reports using ArXiv papers, web search, and RAG pipelines.  
+It combines AI agents, vector search, and scientific paper ingestion to automate research workflows across multiple domains.
+
+<img width="1079" height="554" alt="Research_Agent_3" src="https://github.com/user-attachments/assets/a5136da4-ab60-4072-9e13-9f8b7e3aa8c3" />
+<img width="1079" height="617" alt="Research_Agent_1" src="https://github.com/user-attachments/assets/de61cda4-f27e-4fc4-a7dd-578863c35b91" />
+<img width="1079" height="583" alt="Research_Agent_2" src="https://github.com/user-attachments/assets/c57f7459-0f33-4840-8b2b-50524dcf1f7c" />
+
+---
+
+## 🚀 Features
+
+- AI-powered research report generation
+- ArXiv paper ingestion & PDF processing
+- RAG semantic search with Pinecone
+- Web search integration using SerpAPI
+- Multi-domain research support
+- Interactive Streamlit interface
+
+---
+
+## 🛠️ Tech Stack
+
+- Python
+- LangGraph
+- LangChain
+- OpenAI API
+- Pinecone
+- Streamlit
+- SerpAPI
+- ArXiv API
+
+---
+## 🧠 Project Architecture
+
+```text
+                    ┌─────────────────────┐
+                    │    User Question    │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ Streamlit UI        │
+                    │                     │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │   answer_query()    │
+                    │                     │
+                    └──────────┬──────────┘
+                               │
+                               ▼
+                    ┌─────────────────────┐
+                    │ LangGraph Workflow  │
+                    │   Oracle + Router   │
+                    └──────────┬──────────┘
+                               │
+         ┌─────────────────────┼─────────────────────┐
+         │                     │                     │
+         ▼                     ▼                     ▼
+ ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+ │ rag_search   │     │ fetch_arxiv │     │  web_search  │
+ └──────┬───────┘     └──────┬───────┘     └──────┬───────┘
+        │                    │                    │
+        ▼                    ▼                    ▼
+ ┌──────────────┐    ┌──────────────┐    ┌──────────────┐
+ │  Pinecone DB │    │    ArXiv     │    │   SerpAPI    │
+ │ Vector Search│    │   Abstracts  │    │ Google Search│
+ └──────┬───────┘    └──────────────┘    └──────────────┘
+        │
+        ▼
+ ┌─────────────────────┐
+ │    final_answer     │
+ │ Structured Report   │
+ └──────────┬──────────┘
+            │
+            ▼
+      ┌────────────┐
+      │   Output   │
+      └────────────┘
+```
+
+---
+
+## 📥 Ingestion Pipeline
+
+```text
+        ArXiv API
+             │
+             ▼
+      Download PDFs
+             │
+             ▼
+        Load PDFs
+             │
+             ▼
+       Split Chunks
+             │
+             ▼
+   OpenAI Embeddings
+             │
+             ▼
+      Pinecone Vector DB
+             │
+             ▼
+   Used by RAG Search Tools
+```
