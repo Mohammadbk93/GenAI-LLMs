@@ -768,3 +768,98 @@ It combines AI agents, vector search, and scientific paper ingestion to automate
              ▼
    Used by RAG Search Tools
 ```
+_____________________________________________________________________________________________________________________________________________________
+
+# 7. AI Interview Coach
+
+## Project Overview
+
+AI Interview Coach is a private AI-powered interview preparation platform built for junior and mid-level developers who want to practice technical interviews locally using Large Language Models. This project is currently under active development, and new improvements, optimizations, and features are continuously being added.
+
+<img width="1512" height="794" alt="Screenshot 2026-05-22 at 20 20 08" src="https://github.com/user-attachments/assets/45c519d4-2d34-4cc1-b4b2-687b12eda906" />
+<img width="1512" height="794" alt="Screenshot 2026-05-22 at 20 21 15" src="https://github.com/user-attachments/assets/b093c9c5-d84b-4665-baa2-37b33d5e26a2" />
+<img width="1512" height="794" alt="Screenshot 2026-05-22 at 20 21 37" src="https://github.com/user-attachments/assets/81ec1845-0778-4625-a47e-272335c2d721" />
+<img width="1512" height="794" alt="Screenshot 2026-05-22 at 20 25 49" src="https://github.com/user-attachments/assets/b89e1deb-dacc-4ed4-8d9f-1d8cc31307dd" />
+<img width="1512" height="794" alt="Screenshot 2026-05-22 at 20 27 05" src="https://github.com/user-attachments/assets/f79e0b72-0bf8-4f45-8c5c-768245c1c955" />
+<img width="1512" height="794" alt="Screenshot 2026-05-22 at 20 27 13" src="https://github.com/user-attachments/assets/785f1f95-2dd1-4449-b0b9-ceb0b91cea70" />
+
+
+
+
+
+The platform allows users to:
+- Generate AI-powered study materials
+- Practice technical interview questions
+- Receive automated interview evaluations
+- Get personalized improvement feedback and study plans
+
+The application works entirely with a local LLM setup using Ollama and CrewAI, helping maintain privacy and reduce dependency on cloud AI services. Cloud = pay money more
+
+---
+
+## Features
+
+- AI-generated study material
+- Technical interview simulation
+- Multi-topic interview preparation
+- Local LLM integration with Ollama
+- Automated answer evaluation
+- Personalized interview feedback
+- 7-day AI-generated study plans
+- Multiple difficulty levels
+- Multi-language support
+- Streamlit-based interactive UI
+
+---
+
+## Technologies Used
+
+### Frontend
+- Python
+- Streamlit
+
+### AI & LLM Frameworks
+- CrewAI
+- Ollama
+- Llama 3.2 (Local Model)
+
+### Backend & Processing
+- JSON
+- Regular Expressions (re)
+
+### AI Topics Supported
+
+These are only examples and can be imporved and more structured by more prompt engineering and using better models, aslo RAG can be a good choice. Since I wanted to do it locally,there were some hardware limitations...
+
+- Python
+- FastAPI
+- Machine Learning
+- Deep Learning
+- Artificial Intelligence
+- Data Science
+- MLOps
+- LLMOps
+- AIOps
+
+---
+
+## Architecture Overview
+
+The application is divided into several core modules:
+
+### 1. Study Material Generator
+Generates structured learning content for interview preparation.
+
+### 2. Interview Question Generator
+Creates dynamic technical interview questions based on selected topics and levels.
+
+### 3. Interview Evaluation System
+Reviews candidate answers using AI agents.
+
+### 4. Feedback Generator
+Produces detailed evaluations, strengths, weaknesses, and improvement plans.
+
+### 5. Local AI Infrastructure
+Uses Ollama-hosted local LLMs integrated through CrewAI.
+
+---
