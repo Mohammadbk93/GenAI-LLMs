@@ -862,4 +862,63 @@ Produces detailed evaluations, strengths, weaknesses, and improvement plans.
 ### 5. Local AI Infrastructure
 Uses Ollama-hosted local LLMs integrated through CrewAI.
 
+
+_____________________________________________________________________________________________________________________________________________________
+
+# 8.AI-powered video captioning and translation platform built for creators, educators, and global audiences.
+
+AI-powered video captioning and translation platform built for creators, educators, and global audiences.
+
+https://github.com/user-attachments/assets/a4b7c02b-8fc6-447b-89c3-035de0c4f3e9
+
+## Overview
+
+Smart Caption helps users generate high-quality subtitles for videos in multiple languages(+99) and customize their appearance before exporting a final video with permanently embedded captions.
+
+Designed as a modern full-stack SaaS application, the platform focuses on speed, accessibility, and multilingual content distribution.
+
+## Features
+
+* Automatic speech-to-text transcription
+* Multi-language subtitle translation
+* Custom subtitle styling and positioning
+* Support for both LTR and RTL languages
+* Fast cloud-based video processing
+* Secure user authentication
+* Usage tracking and account management
+* Admin analytics dashboard
+
+## Tech Stack
+
+### Frontend
+
+* Next.js
+* TypeScript
+* Tailwind CSS
+
+### Backend
+
+* FastAPI
+* Celery
+* Redis
+
+### Infrastructure
+
+* Docker
+* Cloud Storage
+* Modern Authentication Provider
+
+## Status
+
+Currently under active development and private beta testing.
+
+## Roadmap
+
+* Subscription and billing system
+* Mobile applications
+* Advanced subtitle editing
+* Preset styling templates
+
 ---
+*A modern platform for making video content accessible across languages.*
+
