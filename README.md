@@ -54,7 +54,7 @@ Each project pairs a working prototype with a clearly defined business use case.
 
 ---
 
-## 🚀 Featured Projects
+##  Featured Projects
 
 | # | Project | Focus | Live Demo |
 |---|---|---|---|
@@ -192,7 +192,7 @@ User Input → Planner → Research → Writer → Reflection/Critique → Revis
 
 ---
 
-### 7. 💹 AI Finance Agent
+### 7.  AI Finance Agent
 
 > ⚠️ **Private research project.** Built for learning and experimentation with AI-driven financial analysis. Professional trading requires strict risk management and validated strategies, so this is intentionally evolving as the underlying financial logic is refined.
 
