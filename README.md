@@ -329,11 +329,11 @@ A modern **full-stack SaaS** platform that generates high-quality subtitles in *
 
 ---
 
-### 11. Local Financial LLM — Fine-Tuned Qwen2.5-3B on Apple Silicon
+### 11. Local Financial LLM — Fine-Tuned Qwen2.5-3B.
 
 A domain-specialized financial language model built end-to-end on free infrastructure:
 trained on Google Colab (T4 GPU) using LoRA fine-tuning, and served locally on Apple
-Silicon via MLX-LM as an OpenAI-compatible API.
+Silicon via MLX-LM.
 
 ## What it does
 - Financial sentiment classification (Bullish / Bearish / Neutral)
@@ -362,5 +362,13 @@ deployment-grade financial NLP model.
 |---|---|---|
 | Apple Silicon (M-series) | MLX-LM | ✅ Working |
 | Local API for LangGraph agent | `mlx_lm.server` on port 8080 | ✅ Working |
-| Ollama (enterprise/Linux) | GGUF via llama.cpp | 🔄 In progress |
 | HuggingFace Hub | Safetensors (float16) | ✅ Uploaded |
+
+## GGUF Conversion
+The merged model can be converted to GGUF format (Q4_K_M quantization) for:
+- **Ollama** — serving on enterprise Linux servers or any OS without Python dependencies
+- **llama.cpp** — CPU inference on edge devices and air-gapped environments
+- **LM Studio / Jan.ai** — non-technical user interfaces for local LLM interaction
+- **Docker deployment** — single portable `.gguf` file, no environment setup required
+- **Team distribution** — one file shared across the team, pulled directly via
+  `ollama run hf.co/mohammadbk321/financial-qwen-3b-GGUF`
