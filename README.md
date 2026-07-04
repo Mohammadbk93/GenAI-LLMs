@@ -330,7 +330,7 @@ A modern **full-stack SaaS** platform that generates high-quality subtitles in *
 ---
 
 ### 11. Local Financial LLM — Fine-Tuned Qwen2.5-3B.
-[Uploading Fine_tuned_finance_model.ipynb…]()
+<img width="342" height="64" alt="image" src="https://github.com/user-attachments/assets/d9315bfc-767f-4e5d-a229-ac2f1a53d0fa" />
 
 A domain-specialized financial language model built end-to-end on free infrastructure:
 trained on Google Colab (T4 GPU) using LoRA fine-tuning, and served locally on Apple
