@@ -67,6 +67,8 @@ Each project pairs a working prototype with a clearly defined business use case.
 | 8 | AI Research Agent | RAG + Web Research | — |
 | 9 | AI Interview Coach | Local LLM | *Private* |
 | 10 | Smart Caption | Full-Stack SaaS | *Private beta* |
+| 11 | Fine-Tuned Local Financial LLM | Fine Tuning for Finance | *Private* |
+
 
 ---
 
@@ -324,3 +326,41 @@ A modern **full-stack SaaS** platform that generates high-quality subtitles in *
 ---
 
 <p align="center"><i>Each project is a working prototype paired with a clear, real-world use case.</i></p>
+
+---
+
+### 11. Local Financial LLM — Fine-Tuned Qwen2.5-3B on Apple Silicon
+
+A domain-specialized financial language model built end-to-end on free infrastructure:
+trained on Google Colab (T4 GPU) using LoRA fine-tuning, and served locally on Apple
+Silicon via MLX-LM as an OpenAI-compatible API.
+
+## What it does
+- Financial sentiment classification (Bullish / Bearish / Neutral)
+- Gold-macro reasoning (DXY, real yields, CPI, central bank dynamics)
+- Ticker and entity extraction from earnings calls and news headlines
+
+## Stack
+`Qwen2.5-3B-Instruct` · `LoRA (r=16, α=32)` · `Unsloth` · `TRL 0.24.0` · `MLX-LM` · 
+
+## Current Limitations & Roadmap
+> ⚠️ This is a proof-of-concept trained on 30 synthetic samples — intentionally minimal
+> to demonstrate the full pipeline on free-tier infrastructure.
+
+Real production quality requires:
+- **500–5,000+ samples** of real financial news, earnings transcripts, and macro data
+- **Stronger infrastructure** — a paid Colab Pro+ session, a cloud GPU (A100/H100),
+  or a dedicated on-premise server to handle larger datasets and longer training runs
+- **Longer training** — 10–20 epochs on a diverse, high-quality dataset
+
+The architecture is fully production-ready and horizontally scalable — swapping in a
+larger dataset and more compute is the only step between this prototype and a
+deployment-grade financial NLP model.
+
+## Deployment paths
+| Target | Tool | Status |
+|---|---|---|
+| Apple Silicon (M-series) | MLX-LM | ✅ Working |
+| Local API for LangGraph agent | `mlx_lm.server` on port 8080 | ✅ Working |
+| Ollama (enterprise/Linux) | GGUF via llama.cpp | 🔄 In progress |
+| HuggingFace Hub | Safetensors (float16) | ✅ Uploaded |
